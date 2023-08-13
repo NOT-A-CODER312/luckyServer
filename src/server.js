@@ -7,6 +7,8 @@ const http = require("http");
 
 // const cluster = require("cluster");
 const app = require("./app");
+const getLuckyToken = require("./models/LuckyToken");
+const getTheAbi = require("./models/LuckyTokenABI")
 
 const expressServer = http.createServer(app);
 // const socketServer = io(expressServer, {
@@ -39,6 +41,8 @@ async function startServer() {
 
   expressServer.listen(PORT)
   console.log(`🍀🍀 Listening to PORT: ${PORT} 🍀🍀`);
+  // getTheAbi()
+  await getLuckyToken()
 }
 
 startServer();
