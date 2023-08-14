@@ -95,7 +95,7 @@ async function getLuckyToken () {
       console.log('Not the first of the month')
     }
   }
-  const giftInterval = setInterval(giftCondition, 30000)
+  const giftInterval = setInterval(giftCondition, 21600000)
 }
 
 module.exports = getLuckyToken
