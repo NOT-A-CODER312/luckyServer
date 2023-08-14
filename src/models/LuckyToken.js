@@ -41,7 +41,7 @@ async function getLuckyToken () {
     if (
       Number(ethers.formatEther(totalSupply)) <
         Number(ethers.formatEther(cap)) &&
-      currentDate.getDate() == 14
+      currentDate.getDate() == 1
     ) {
       const eligibleAddresses =
         await LuckyToken.getAllEligibleLucyPoolRewardAddresses()
@@ -95,7 +95,7 @@ async function getLuckyToken () {
       console.log('Not the first of the month')
     }
   }
-  const giftInterval = setInterval(giftCondition, 30000)
+  const giftInterval = setInterval(giftCondition, 21600000)
 }
 
 module.exports = getLuckyToken
